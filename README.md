@@ -3,7 +3,7 @@
 > **Do not install the ZIP files from this repository.**
 
 The maintained QuestMaster Pro addon is currently developed in
-[SpidermanTotro/azeroth-pilot-reloaded-Pro-](https://github.com/SpidermanTotro/azeroth-pilot-reloaded-Pro-).
+[HenricHuntsman/QuestMaster-Pro](https://github.com/HenricHuntsman/QuestMaster-Pro).
 
 This repository is an unresolved archive holding area. It contains historical and
 misfiled snapshots that must be reviewed and recovered before any archival,
