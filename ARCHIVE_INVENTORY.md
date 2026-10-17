@@ -1,55 +1,29 @@
 # Archive inventory
 
-Checked on 18 July 2026 against the current default branches of the related
-repositories.
+Updated 18 October 2026. This repository preserves historical QuestMaster/Azeroth snapshots; the maintained addon is [QuestMaster-Pro](https://github.com/HenricHuntsman/QuestMaster-Pro).
 
-## `azeroth-pilot-reloaded-Pro--main (1).zip`
+## Retained addon snapshots
 
-- 61 ZIP entries
-- historical snapshot of the maintained QuestMaster Pro repository
-- every archived file path is present in the current
-  `SpidermanTotro/azeroth-pilot-reloaded-Pro-` repository
-- the maintained repository contains newer code, patch support, CI, exercises,
-  scripts, templates, and additional files
+| File | Current verification | Decision |
+| --- | --- | --- |
+| azeroth-pilot-reloaded-Pro--main (1).zip | Readable ZIP, 61 entries, CRC check passed; SHA-256 `91c688f4caa8710f495306734895e1de6111baa2b5cb0d2b0531e7b119b15ce5` | Keep pending comparison with maintained source |
+| azeroth-pilot-reloaded-feature-complete-rewrite-experimental.zip | The earlier July inventory described 270 entries and unique experimental areas. The current file read did not return its payload, so that description was not reverified today | Preserve; do not discard or merge unreviewed code |
 
-This archive appears superseded, but it should remain untouched until the broader
-recovery and cleanup decision is approved.
+A readable ZIP and CRC check establish archive integrity, not addon correctness, licence compliance, or compatibility.
 
-## `azeroth-pilot-reloaded-feature-complete-rewrite-experimental.zip`
+## Misfiled Book Publish Forge duplicate removed
 
-- 270 ZIP entries
-- experimental Azeroth Pilot Reloaded rewrite
-- contains unverified files not present in the current upstream-tracking
-  `SpidermanTotro/azeroth-pilot-reloaded` default branch
-- unique areas include additional APR core helpers, profession data, UI code,
-  CI configuration, scripts, and route files for several expansions
+The former `files (2).zip` was unrelated Book Publish Forge React prototype material. Both repository copies were read and independently inspected on 18 October:
 
-This snapshot is **not safe to discard yet**. Unique code needs a security,
-licensing, runtime, and provenance review before it is recovered or rejected.
+- 86 entries; CRC checks passed.
+- 175,528 bytes per archive.
+- Identical Git blob SHA: `8915cf7b1ad5a6c2aa514efce72893f1f3355ba5`.
+- Identical SHA-256: `b64acb87fa90ee0bde09034f3ccf18c30ebda19e11c90af98a7266d895f80da1`.
 
-## `files (2).zip`
+The redundant copy was removed from this repository as part of Henric's requested cleanup. The original remains in [Book Publish Forge](https://github.com/HenricHuntsman/book-publish-forge/blob/main/files%20(2).zip), and this repository's Git history retains the removed blob.
 
-- 86 ZIP entries
-- Book Publish Forge React prototype stored in this unrelated repository
-- a byte-for-byte identical archive already exists at
-  `SpidermanTotro/book-publish-forge/files (2).zip`
-- SHA-256 for both copies:
-  `b64acb87fa90ee0bde09034f3ccf18c30ebda19e11c90af98a7266d895f80da1`
-- only `README.md` from the archive shares a path with files currently
-  extracted on the Book Publish Forge default branch
-- the other 85 archived paths are not currently extracted on that branch
-- includes AI, collaboration, publishing, ethics, export, dashboard, service
-  worker, and UI prototype files
+The prototype includes writing, AI, collaboration, dashboard and export components. Its contents were listed and CRC-checked, not security-reviewed or promoted into the active app.
 
-The historical prototype is therefore preserved in the correct repository, but
-its contents remain unreviewed and unextracted. It must be evaluated in isolation
-and must not be merged into Book Publish Forge as one untested batch.
+## Remaining work
 
-## Cleanup rule
-
-Do not delete, archive, rename, or rewrite this repository until:
-
-1. unique experimental Azeroth files are reviewed and preserved or explicitly rejected;
-2. the Book Publish Forge prototype is audited from its copy in the correct repository;
-3. the maintained QuestMaster repository and public links have a confirmed final name;
-4. Henric gives explicit approval for the cleanup action, including disposal of duplicate archives.
+Compare the two retained addon archives against current source, review unique code and provenance, and run addon-specific checks before recovering features. Repository renaming, whole-repository archival and deletion have not been performed.
